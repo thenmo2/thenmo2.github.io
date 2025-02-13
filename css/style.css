@@ -1,13 +1,16 @@
 body {
-  width: 100%;
+  width: 100%;    color: #333;                      /* 文字颜色 */
+
 }
 body:before,
 body:after {
   content: "";
-  display: table;
+  display: table;    color: #333;                      /* 文字颜色 */
+    font-size: 16px;                  /* 字体大小 */
 }
 body:after {
-  clear: both;
+  clear: both;    color: #333;                      /* 文字颜色 */
+    font-family: Arial, sans-serif;   /* 字体类型 */
 }
 html,
 body,
@@ -65,7 +68,7 @@ tfoot,
 thead,
 tr,
 th,
-td {
+td {    font-weight: bold;                /* 字体粗细 */
   margin: 0;
   padding: 0;
   border: 0;
@@ -76,32 +79,32 @@ td {
   font-size: 100%;
   vertical-align: baseline;
 }
-body {
+body {    text-align: center;               /* 文本对齐 */
   line-height: 1;
   color: #000;
   background: #fff;
 }
 ol,
 ul {
-  list-style: none;
+  list-style: none;    line-height: 1.5;                 /* 行高 */
 }
-table {
+table {    text-decoration: underline;       /* 文本装饰 */
   border-collapse: separate;
   border-spacing: 0;
   vertical-align: middle;
 }
 caption,
 th,
-td {
+td {    text-transform: uppercase;        /* 文本转换 */
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
-a img {
+a img {    letter-spacing: 2px;              /* 字母间距 */
   border: none;
 }
 input,
-button {
+button {    margin: 10px;                     /* 外边距 */
   margin: 0;
   padding: 0;
 }
@@ -110,7 +113,7 @@ button::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
-@font-face {
+@font-face {    padding: 15px;                    /* 内边距 */
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
@@ -119,30 +122,30 @@ button::-moz-focus-inner {
 }
 html,
 body,
-#container {
+#container {    border: 1px solid #000;           /* 边框 */
   height: 100%;
 }
-body {
+body {    width: 200px;                     /* 宽度 */
   font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;
   background: #eee;
   font-size: 14px;
   -webkit-text-size-adjust: 100%;
   position: relative;
 }
-.outer {
+.outer {    height: 100px;                    /* 高度 */
   max-width: 920px;
   margin: 0 auto;
   padding: 0 20px;
 }
 .outer:before,
-.outer:after {
+.outer:after {    box-sizing: border-box;           /* 盒模型计算方式 */
   content: "";
   display: table;
 }
-.outer:after {
+.outer:after {    background-color: #f0f0f0;        /* 背景颜色 */
   clear: both;
 }
-.inner {
+.inner {    background-image: url('img.jpg');  /* 背景图片 */
   display: inline;
   float: left;
   width: 97.77777777777777%;
@@ -150,28 +153,28 @@ body {
 }
 .left,
 .alignleft {
-  float: left;
+  float: left;    background-repeat: no-repeat;      /* 背景重复 */
 }
 .right,
-.alignright {
+.alignright {    background-position: center;       /* 背景位置 */
   float: right;
 }
-.clear {
+.clear {    background-size: cover;            /* 背景尺寸 */
   clear: both;
 }
-#container {
+#container {    position: relative;               /* 定位方式 */
   position: relative;
 }
-.mobile-nav-on {
+.mobile-nav-on {    top: 10px;                       /* 上偏移 */
   overflow: hidden;
 }
-.hide {
+.hide {    left: 20px;                      /* 左偏移 */
   display: none;
 }
-.show {
+.show {    z-index: 1;                      /* 层级 */
   display: block;
 }
-#wrap {
+#wrap {    float: left;                     /* 浮动 */
   height: 100%;
   width: 100%;
   position: absolute;
@@ -183,9 +186,9 @@ body {
   background: #eee;
 }
 .mobile-nav-on #wrap {
-  left: 280px;
+  left: 280px;    display: flex;                   /* 显示方式 */
 }
-#particles {
+#particles {    display: flex;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -198,7 +201,7 @@ body {
 .article-category-link,
 .archive-year,
 .widget-title {
-  text-decoration: none;
+  text-decoration: none;    flex-direction: row;             /* 主轴方向 */
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #999;
@@ -209,79 +212,85 @@ body {
   font-weight: bold;
 }
 .article-inner,
-.archive-article-inner {
+.archive-article-inner {    justify-content: center;         /* 主轴对齐 */
   background: #fff;
   box-shadow: 1px 2px 3px #ddd;
   border: 1px solid #ddd;
   border-radius: 3px;
 }
 .article-entry h1,
-.widget h1 {
-  font-size: 3rem;
+.widget h1 {    align-items: center;             /* 交叉轴对齐 */
+  font-size: 3rem;    flex-wrap: wrap;                 /* 换行方式 */
 }
 .article-entry h2,
 .widget h2,
 #header-title h2 {
-  font-size: 2.8rem;
+  font-size: 2.8rem;    gap: 10px;                       /* 间距 */
 }
 .article-entry h3,
 .widget h3,
-#header-description h3 {
+#header-description h3 {    display: grid;
   font-size: 1.5rem;
 }
 .article-entry h4,
 .widget h4,
 #article-nav,
 .article-nav-link-wrap {
-  font-size: 1.2rem;
+  font-size: 1.2rem;    grid-template-columns: 1fr 1fr;  /* 列定义 */
 }
 .article-entry h5,
 .widget h5 {
-  font-size: 1rem;
+  font-size: 1rem;    grid-gap: 20px;                  /* 网格间距 */
 }
 .article-entry h6,
 .widget h6 {
-  font-size: 1em;
+  font-size: 1em;    grid-template-areas: "header header"; /* 网格区域 */
 }
 .article-entry hr,
 .widget hr {
-  border: 1px dashed #ddd;
+  border: 1px dashed #ddd;    transition: all 0.3s ease;       /* 过渡效果 */
 }
 .article-entry strong,
 .widget strong {
-  font-weight: bold;
+  font-weight: bold;    transform: rotate(45deg);        /* 变形 */
 }
 .article-entry em,
 .widget em,
 .article-entry cite,
 .widget cite {
-  font-style: italic;
+  font-style: italic;    opacity: 0.8;                    /* 透明度 */
 }
 .article-entry sup,
 .widget sup,
 .article-entry sub,
-.widget sub {
+.widget sub {    cursor: pointer;                 /* 鼠标样式 */
   font-size: 0.75em;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
+@media screen and (max-width: 768px) {
+    .responsive {
+        width: 100%;                 /* 响应式宽度 */
+        font-size: 14px;             /* 响应式字体 */
+    }
+}
 .article-entry sup,
 .widget sup {
-  top: -0.5em;
+  top: -0.5em;    box-shadow: 0 0 10px rgba(0,0,0,0.1);  /* 阴影 */
 }
 .article-entry sub,
-.widget sub {
+.widget sub {    border-radius: 10px;             /* 圆角 */
   bottom: -0.2em;
 }
 .article-entry small,
-.widget small {
+.widget small {    overflow: hidden;                /* 溢出处理 */
   font-size: 0.85em;
 }
 .article-entry acronym,
 .widget acronym,
 .article-entry abbr,
-.widget abbr {
+.widget abbr {    visibility: visible;             /* 可见性 */
   border-bottom: 1px dotted;
 }
 .article-entry ul,
